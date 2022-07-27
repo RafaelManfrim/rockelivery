@@ -12,6 +12,7 @@ defmodule RockeliveryWeb.Router do
 
     get "/", WelcomeController, :index
     resources "users", UsersController, except: [:new, :edit]
+    resources "items", ItemsController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
