@@ -1,5 +1,5 @@
 defmodule Rockelivery.Orders.ValidateAndMultiplyItems do
-  defp call(items, items_ids, items_params) do
+  def call(items, items_ids, items_params) do
     items_map = Map.new(items, fn item -> {item.id, item} end)
 
     items_ids
