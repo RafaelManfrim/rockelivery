@@ -48,10 +48,11 @@ jobs:
       run: mix coveralls.json
       env:
         MIX_ENV: test
-    - name: Run CodeCov Script
-      run: curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    - name: Upload Coverage to Codecov
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
     - name: Install dependencies
       run: mix deps.get
     - name: Run tests
