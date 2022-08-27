@@ -49,7 +49,6 @@ jobs:
       env:
         MIX_ENV: test
     - name: Upload Coverage to Codecov
-      uses: actions/checkout@master
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
