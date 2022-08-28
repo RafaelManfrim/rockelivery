@@ -25,14 +25,14 @@ user = %User{
 %User{id: user_id, address: address} = Repo.insert!(user)
 
 item1 = %Item{
-  category: "food",
+  category: :food,
   description: "Mingau de chocolate",
   price: Decimal.new("8.99"),
   photo: "priv/photos/mingau_de_chocolate.png"
 }
 
 item2 = %Item{
-  category: "food",
+  category: :food,
   description: "Coxinha de frango",
   price: Decimal.new("5.99"),
   photo: "priv/photos/coxinha_de_frango.png"
